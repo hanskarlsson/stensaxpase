@@ -1,4 +1,4 @@
-package com.jayway.stensaxpase.login;
+package com.jayway.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
