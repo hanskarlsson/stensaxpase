@@ -1,3 +1,5 @@
+package com.jayway.stensaxpase;
+
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
@@ -28,4 +30,5 @@ public class RunStenSaxPase
     server.start();
     server.join();
   }
+}
 
