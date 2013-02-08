@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.AuthenticationUserDetailsService;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -41,7 +42,9 @@ public class MyUserDetailsService implements UserDetailsService, AuthenticationU
 	}
 
 	private List<GrantedAuthority> retrievePrivileges(String username) {
-		return Arrays.<GrantedAuthority>asList();
+        System.out.println("skfjsdkfjskjfksjdfs");
+        List<GrantedAuthority> grantedAuthorities = Arrays.<GrantedAuthority>asList(new SimpleGrantedAuthority("secret"));
+        return grantedAuthorities;
 	}
 
     private String getOpenIDEmailAttribute(OpenIDAuthenticationToken token) {
